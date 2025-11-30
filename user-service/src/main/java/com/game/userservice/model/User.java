@@ -19,17 +19,14 @@ public class User {
     @Column(unique = true, nullable = false)
     private String username;
 
-    @Column(unique = true, nullable = false)
-    private String email;
-
     @Column(nullable = false)
     private String password;
 
     @Builder.Default
-    private Integer score = 0;
+    private Long score = 0L;
 
     @Builder.Default
-    private Integer turns = 10;
+    private Integer turns = 0;
 
     @Builder.Default
     private LocalDateTime createdAt = LocalDateTime.now();
