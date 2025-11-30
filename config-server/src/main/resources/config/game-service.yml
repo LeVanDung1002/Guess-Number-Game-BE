@@ -1,0 +1,13 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: game-service
+  datasource:
+    url: jdbc:postgresql://localhost:5433/game_db
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: game-group
+      auto-offset-reset: earliest

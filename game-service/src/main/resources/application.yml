@@ -1,23 +1,5 @@
-server:
-  port: 8082
-
 spring:
   application:
     name: game-service
-  datasource:
-    url: jdbc:postgresql://localhost:5432/game_db
-    username: postgres
-    password: password
-  jpa:
-    hibernate:
-      ddl-auto: update
-  kafka:
-    bootstrap-servers: localhost:9092
-    consumer:
-      group-id: game-group
-      auto-offset-reset: earliest
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+  config:
+    import: optional:configserver:http://localhost:8888
