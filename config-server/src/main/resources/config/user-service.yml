@@ -6,6 +6,11 @@ spring:
     name: user-service
   datasource:
     url: jdbc:postgresql://localhost:5433/game_db
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
 
 logging:
   level:

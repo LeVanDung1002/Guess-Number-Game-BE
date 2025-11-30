@@ -8,8 +8,9 @@ import lombok.Data;
 @AllArgsConstructor
 @Builder
 public class UserResponse {
+    private String userId;
     private String token;
     private String username;
-    private Integer turn;
-    private Long score;
+    private Integer turns;
+    private Long scores;
 }
